@@ -5,6 +5,10 @@
     let isHovering = false;
     let beingDragged = false;
 
+    //track the offset between the mouse position and the glossary
+    let offSetLeft = 0;
+    let offSetTop = 0;
+
     const handleMouseMove = (event) => {
       console.log(event.pageX + ", " + event.pageY);
       //user is holding down the mouse button?
@@ -13,9 +17,28 @@
       //if the object is being dragged then continue doing so until the user has
       //let go of their mouse
       if ((isHovering === true && mouseDown === 1) || beingDragged) {
+        const glossaryStyle = window.getComputedStyle(glossary);
+
+        if (beingDragged == false) {
+          offSetLeft = parseInt(glossaryStyle.left) - event.pageX;
+          offSetTop = parseInt(glossaryStyle.top) - event.pageY;
+        }
         beingDragged = true;
-        glossary.style.left = event.pageX + "px";
-        glossary.style.top = event.pageY + "px";
+
+        glossary.style.left = event.pageX + offSetLeft + "px";
+        glossary.style.top = event.pageY + offSetTop + "px";
+
+        //stop the glossary from going outside the page
+        if (parseInt(glossaryStyle.left) < 0) glossary.style.left = 0;
+        if (parseInt(glossaryStyle.top) < 0) glossary.style.top = 0;
+        console.log(
+          "---" +
+            event.pageX +
+            " " +
+            offSetLeft +
+            " " +
+            parseInt(glossaryStyle.left)
+        );
       }
     };
 

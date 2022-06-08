@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: roboto, sans-serif;
+  background: #242120;
+  color: white;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#tree-map {
+  border: 1px dashed white;
+  border-width: medium;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+h4 {
+  font-weight: 400;
+}
+#legend-text {
+  fill: white;
+}
+#tooltip {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  width: 200;
+  height: auto;
+  background: #c7defc;
+  color: black;
+  font-size: 0.9em;
+  font-weight: 300;
+  padding: 0.5em;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+.tooltip-text {
+  margin: 0;
+}

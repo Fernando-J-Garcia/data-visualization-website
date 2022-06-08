@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>US Educational Attainment</title>
+  <link rel="stylesheet" href="./education.css">
+  <link rel="stylesheet" href="./glossary.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+  <script>$(function(){
+    $("#glossary").load("glossary.html"); 
+  });
+  </script>
+</head>
+<body>
+<div id="glossary"></div>
+<!-- partial:index.partial.html -->
+<div id='container'>
+  <h1 id='title'>United States Educational Attainment</h1>
+  <h4 id='description'>Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)
+</h4>
+  <p id='source'>Source: <a href ='https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx'>USDA Economic Research Service<a/></p>
+</div>
+<!-- partial -->
+<script src="./education.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+#glossary {
+  position: absolute;
+  background: black;
+  color: white;
+  left: 0;
+  top: 0;
+  font-size: 1.5em;
+  text-align: left;
+  user-select: none;
+  cursor: move;
+}
+ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 2em;
+}
+li {
+  border-bottom: solid 2px white;
+  width: 100%;
+  padding: 0.5em 0;
+}
+a {
+  color: white;
+  padding-left: 0.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-aspect-ratio: 3/2) {
+  #glossary {
+    top: 65%;
+    width: 100%;
+  }
+  li {
+    padding: 1em 0;
+  }
+  a {
+    padding-left: 0.5em;
+  }
+}
+@media (aspect-ratio: 1/1) {
+  #glossary {
+    top: 65%;
+    width: 100%;
+    visibility: hidden;
+  }
+}

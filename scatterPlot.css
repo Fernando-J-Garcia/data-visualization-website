@@ -1,0 +1,45 @@
+body {
+  color: white;
+  background: #583638;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: robot, sans-serif;
+}
+h1 {
+  margin-bottom: 0;
+}
+#container {
+  background: #364958;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5),
+    2px 2px 25px 2px rgba(0, 0, 0, 0.6);
+}
+svg {
+  fill: white;
+}
+svg > g {
+  color: white;
+}
+.dot {
+}
+#tooltip {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  width: auto;
+  height: auto;
+  background: #c7defc;
+  color: black;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.5em;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+.tooltip-text {
+  margin: 0;
+}

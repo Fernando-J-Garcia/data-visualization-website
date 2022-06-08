@@ -1,0 +1,38 @@
+<body>
+  <script>
+    const glossary = document.getElementById("glossary");
+    let mouseDown = 0;
+    let isHovering = false;
+    let beingDragged = false;
+
+    const handleMouseMove = (event) => {
+      console.log(event.pageX + ", " + event.pageY);
+      //user is holding down the mouse button?
+      //user is moving mouse?
+      //Then drag the object...
+      //if the object is being dragged then continue doing so until the user has
+      //let go of their mouse
+      if ((isHovering === true && mouseDown === 1) || beingDragged) {
+        beingDragged = true;
+        glossary.style.left = event.pageX + "px";
+        glossary.style.top = event.pageY + "px";
+      }
+    };
+
+    document.onmousemove = handleMouseMove;
+    document.body.onmousedown = () => (mouseDown = 1);
+    document.body.onmouseup = () => {
+      mouseDown = 0;
+      beingDragged = false;
+    };
+
+    glossary.addEventListener("mouseover", () => (isHovering = true));
+    glossary.addEventListener("mouseout", () => (isHovering = false));
+  </script>
+  <ul>
+    <li><a href="./education.html">Education Map</a></li>
+    <li><a href="./treeMap.html">Tree Map</a></li>
+    <li><a href="./heatMap.html">Heat Map</a></li>
+    <li><a href="./scatterPlot.html">Scatter Plot</a></li>
+  </ul>
+</body>

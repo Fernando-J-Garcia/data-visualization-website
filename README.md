@@ -1,2 +1,3 @@
 # data-visualization-website
-Made with Jquery, and d3.js
+Exploring the possiblities with d3.js
+
